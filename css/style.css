@@ -1,0 +1,384 @@
+/* 共通部分 */
+
+html{
+  font-size: 100%;
+  
+}
+body{
+  font-family:"Roboto", "YuGothic", "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  font-weight: 400;
+  
+  color:#4c4949;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  object-fit: cover;
+}
+*{
+  margin: 0;
+}
+.wrapper{
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+/* ヘッダー */
+.start {
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  
+
+}
+.start h1{
+  font-size: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-45%);
+  display: none;
+  z-index: 1001;
+}
+.pc-navi ul{
+  display: flex;
+  list-style: none;
+  padding-top: 3%;
+  position: absolute;
+  top: 8%;
+  right:5%;
+}
+.pc-navi ul li{
+  padding-left: 40px ;
+  font-family: "Helvetica LT W01 Roman";
+  
+}
+nav li a{
+  color: black;
+  text-decoration: none;
+  transition: .4s;
+  padding-bottom: 10px;
+}
+nav li a:hover{
+  color: brown;
+  border-bottom: 1px solid brown;
+}
+.zoomslider{
+  height: 700px;
+  position: relative;
+}
+.zoomslider h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 100px;
+}
+.burger-btn{
+  position: fixed;
+  top: 36px;
+  right: 10px;
+       
+  width: 39px;      
+  height: 39px;      
+    
+  z-index: 3;
+  border:none;  
+  cursor: pointer;
+    
+}    
+.burger-btn:hover{
+  opacity: .4;
+}
+#open{
+  display: none;
+}
+.bar{      
+  width: 35px;      
+  height: 2px;        
+  display: block;      
+  position: absolute;      
+  left: 50%;      
+  transform: translateX(-50%);      
+  background-color: red;
+
+}    
+.bar_top{   
+  top: 10px;
+}
+.bar_mid{    
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.bar_bottom{
+  bottom: 10px;
+}
+.overlay .burger-btn .bar_top{      
+  transform: translate(-50%,10px) rotate(45deg);      
+  transition: transform .3s;    
+}    
+.overlay .burger-btn .bar_mid{      
+  opacity: 0;       
+  transition: opacity .3s;    
+}    
+.overlay .burger-btn .bar_bottom{      
+transform: translate(-50%,-8px) rotate(-45deg);      
+transition: transform .3s;    
+}
+
+.overlay{      
+  opacity: 0;    
+  width: 100vw;      
+  height: 100vh;      
+  position: fixed;      
+  top: 0;      
+  left: 0;       
+  z-index: 20000; 
+  background-color:#ffffff;  
+  pointer-events: none; 
+  transition: opacity .6s;  
+}     
+.overlay ul li{
+  display: block;        
+  font-size: 70px;    
+  text-align: center;  
+  margin-top: 40px; 
+  
+}
+.sp-nav ul{
+  padding: 0;
+}
+.sp-nav ul li{
+  font-size: 30px;
+}
+.sp-nav .store:after{
+  width: 30px;
+  height: 32px;
+  background-size: 30px;
+  top: 10px;
+}
+.sp-nav .store:hover:after{
+  width: 30px;
+  height: 32px;
+  background-size: 30px;
+  top: 10px;
+}
+/* ヘッダー ここまで */
+
+/* メイン */
+main.wrapper{
+  display: flex;
+  gap: 10%;
+  margin-top: 20%;
+}
+.images{
+  width:40% ;
+  /* background-color: aquamarine; */
+}
+
+.images img:last-child{
+   width: 65%;
+   margin-left: 30%;
+   margin-top: 10px;
+   height: 60%;
+   object-fit: cover;
+
+}
+
+.content{
+  width: 50%;
+  /* background-color: bisque; */
+}
+.content h2{
+  font-size: 33px;
+  line-height: 48px;
+  font-weight: 400;
+}
+.content p{
+  margin-top: 15%;
+  font-size: 17px;
+  line-height: 33px;
+}
+/* メインここまで */
+
+/* フッター */
+footer{
+  background-color: #313131;
+  color: #ffffff;
+  margin-top: 10%;
+}
+footer .wrapper{
+  padding: 20px 2% 20px;
+  display: flex;
+}
+footer h3{
+  font-size: 30px;
+  margin-right: 50px;
+}
+footer ul{
+  list-style: none;
+}
+footer ul li{
+  font-family: "Helvetica LT W01 Roman";
+  font-size: 16px;
+  line-height: 50px;
+
+}
+footer ul li a{
+  color: inherit;
+  transition: .4s;
+}
+footer ul li a:hover{
+  color: brown;
+  
+}
+
+.store{
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ffffff;
+  position: relative;
+  transition: .4s;
+}
+.store::after{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 27px;
+  background-image: url(../images/icon_cart_wht.png),url(../images/icon_cart_on.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  right: 3%;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  transition: .4s;
+}
+.store:hover{
+  color: brown;
+  border: 1px solid brown;
+}
+.store:hover:after{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 27px;
+  background-image: url(../images/icon_cart_on.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  right: 3%;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+}
+
+/* フッターここまで */
+
+/* iPad版 */
+@media(max-width:800px){
+
+  main.wrapper{
+    flex-direction: column-reverse;
+  }
+  .content h2{
+    font-size: 24px;
+    line-height: 48px;
+    
+  }
+  .content p{
+    margin-top: 10%;
+    font-size: 13px;
+    line-height: 33px;
+  }
+  .images{
+    width: 100%;
+    margin-top: 10%;
+    height: 500px;
+    position: relative;
+  }
+  .content{
+    width: 100%;
+  }
+  .images img:first-child{
+    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .images img:last-child{
+    width: 30%;
+    height: 200px;
+    margin: 100px 0 0 4%;
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+  }
+
+
+}
+
+@media(max-width:550px){
+  .pc-navi{
+    display: none;
+  }
+  #open{
+    display: block;
+  }
+  .images img:last-child{
+    height: 130px;
+    margin: 70px 0 0 4%;
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+  }
+  .images{
+    height: 350px;
+  }
+
+  footer .wrapper{
+    flex-direction: column;
+  }
+  footer h3{
+    padding-left: 40px;
+  }
+
+}
+
+/* スマホ版 */
+
+@media(max-width:420px){
+  .images img:last-child{
+    height: 100px;
+    margin: 50px 0 0 3%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+  }
+  .zoomslider{
+    height: 600px;
+   
+  }
+  .zoomslider h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-90%);
+    font-size: 60px;
+  }
+  .start h1{
+    font-size: 60px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-155%);
+  }
+}
