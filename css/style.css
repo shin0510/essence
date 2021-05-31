@@ -39,12 +39,20 @@ img{
   
 
 }
+.start2{
+  position: relative;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 700px;
+
+
+}
 .start h1{
   font-size: 100px;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-45%);
+  transform: translate(-50%,-50%);
   display: none;
   z-index: 1001;
 }
@@ -74,6 +82,8 @@ nav li a:hover{
 .zoomslider{
   height: 700px;
   position: relative;
+ 
+  object-fit: cover;
 }
 .zoomslider h1{
   position: absolute;
@@ -214,6 +224,7 @@ footer{
   background-color: #313131;
   color: #ffffff;
   margin-top: 10%;
+ 
 }
 footer .wrapper{
   padding: 20px 2% 20px;
@@ -356,6 +367,10 @@ footer ul li a:hover{
 /* スマホ版 */
 
 @media(max-width:420px){
+  .start2{
+    height: 600px;
+  }
+  
   .images img:last-child{
     height: 100px;
     margin: 50px 0 0 3%;
@@ -377,8 +392,8 @@ footer ul li a:hover{
   }
   .start h1{
     font-size: 60px;
-    top: 30%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-155%);
+    transform: translate(-50%,-90%);
   }
 }
