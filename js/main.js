@@ -1,3 +1,5 @@
+
+
 $(function(){
   $("html *").css("overflow","hidden");
   $(window).on("touchmove.noScroll",function(e){
@@ -53,6 +55,9 @@ $(function(){
 
 });
 $(function() {
+  $('html,body').animate({ scrollTop: 0 }, '1');
+});
+$(document).ready(function(){
   $('html,body').animate({ scrollTop: 0 }, '1');
 });
 
